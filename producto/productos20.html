@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veyrun | Producto</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#050505,#fd164f);
+}
+
+header{
+     background:linear-gradient(to right,#050505,#fd164f);
+    color:rgb(244, 248, 0);
+    text-align:center;
+    padding:20px;
+    font-size:50px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+    display:flex;
+    gap:50px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.imagenes{
+    width:50%;
+}
+
+.imagen-principal{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.miniaturas{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.miniaturas img{
+    width:90px;
+    height:110px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.miniaturas img:hover{
+    transform:scale(1.08);
+    border:2px solid #000;
+}
+
+.info{
+    width:50%;
+}
+
+h1{
+    font-size:40px;
+}
+
+.precio{
+    font-size:35px;
+    color:#15ff00;
+    margin:20px 0;
+}
+
+.descripcion{
+    color:#555;
+    line-height:28px;
+    margin-bottom:25px;
+}
+
+h3{
+    margin:18px 0 10px;
+}
+
+.tallas{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.talla{
+    border:2px solid #000;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.talla:hover{
+    background:#000;
+    color:white;
+}
+
+.materiales{
+    line-height:28px;
+    color:#444;
+}
+
+.modelos{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.modelo{
+    background:#ececec;
+    padding:10px 18px;
+    border-radius:25px;
+}
+
+button{
+    width:100%;
+    margin-top:35px;
+    padding:18px;
+    background:#000;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+@media(max-width:900px){
+
+.contenedor{
+flex-direction:column;
+}
+
+.imagenes,.info{
+width:100%;
+}
+
+.imagen-principal{
+height:450px;
+}
+
+}
+.center{
+    text-align: center;
+    position: relative;
+    left: 100px;
+}
+.foto{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card button{
+    margin:15px;
+    width:calc(100% - 30px);
+    padding:12px;
+    border:none;
+    background:#111;
+    color:rgb(250, 248, 248);
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#ffcc00;
+    color:black;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+VEYRUN
+</header>
+<a href="../ventas.html">
+    <img src="flecha.jpg" class="foto"></button>
+</a>
+
+<a href="../index.html">
+    <img src="inicio.jpg" class="foto"></button>
+</a>
+
+<div class="contenedor">
+
+<div class="imagenes">
+
+<img id="principal" class="imagen-principal"
+src="../fotod de productos/producto20.0.jpeg" >
+
+<div class="miniaturas">
+
+<img src="../fotod de productos/producto20.0.jpeg"
+onclick="cambiar(this.src)">
+
+<img src="../productos/producto18.jpeg"
+onclick="cambiar(this.src)">
+
+</div>
+
+</div>
+
+<div class="info">
+
+<h1>VESTIDO LARGO CAFÈ FLOREADO</h1>
+
+<div class="precio">
+Bs. 85
+</div>
+
+<p class="descripcion">
+
+Vestido femenino de estilo casual , ideal para eventos, salidas o reuniones
+. Su diseño elegante ofrece comodidad y un ajuste perfecto.
+La talla se pueden ajustar segùn la preferencia .
+
+</p>
+
+<h3>talla </h3>
+
+<div class="tallas">
+<div class="talla">L</div>
+
+</div>
+
+<h3>Material</h3>
+
+<div class="materiales">
+
+• tela: CHARLY<br>
+• se puede ajustar<br>
+• Tela suave y transpirable<br>
+
+
+</div>
+
+<div class="card">
+        <a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20largo%20CAFE%20FLOREADO" target="_blank">
+            <button>comprar</button>
+        </a>
+
+</div>
+</a>
+</div>
+
+<script>
+
+function cambiar(imagen){
+
+document.getElementById("principal").src=imagen;
+
+}
+
+</script>
+
+</body>
+</html>
