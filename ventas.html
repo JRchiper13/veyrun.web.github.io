@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="vert" content="width=device-width, initial-scale=1.0">
+<title>VEYRUN | Moda Femenina</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    background: linear-gradient(to right,#050505,#f7a1b6, red);
+}
+
+header{
+background: linear-gradient(to right,#050505,#f7a1b6,red);
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:#fbff00;
+}
+
+input{
+width:300px;
+padding:12px;
+border-radius:30px;
+border:1px solid #ddd;
+outline:none;
+}
+
+.banner{
+height:150px;
+background:linear-gradient(to right,#050505,#f7a1b6,red);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.banner h1{
+font-size:50px;
+color:#fdc50c;
+}
+
+.banner p{
+margin-top:10px;
+font-size:20px;
+color:#ffffff;
+}
+
+.prod{
+padding:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px;
+font-size:22px;
+}
+
+.precio{
+padding:0 15px;
+color:#e91e63;
+font-size:22px;
+font-weight:bold;
+}
+
+.btn{
+display:block;
+margin:15px;
+padding:14px;
+background:#25D366;
+color:white;
+text-decoration:none;
+text-align:center;
+border-radius:30px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#128C7E;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:auto;
+}
+.perfil{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Celulares */
+@media (max-width: 768px){
+
+    .prod{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .card img{
+        width: 100%;
+        height: 90px;
+        object-fit: cover;
+    }
+
+    .card h2{
+        font-size: 11px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .precio{
+        font-size: 11px;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .btn{
+        margin: 5px;
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    #buscar{
+        width: 100%;
+    }
+
+    header{
+        padding: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+}
+/* Animación de entrada de productos */
+.card{
+    opacity:0;
+    transform:translateY(40px);
+    animation: aparecer .8s ease forwards;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* efecto escalonado */
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+.card:nth-child(7){animation-delay:.7s;}
+.card:nth-child(8){animation-delay:.8s;}
+.imagen-redonda{
+
+    width:60px;
+    height: 60px;
+
+    border-radius:50%;
+
+    object-fit:cover;}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<img src="Logos.html/logo.png" width="60 " class="imagen-redonda">
+<div class="logo"> VEYRUN</div>
+<a href="index.html"> <img src="Logos.html/flecha.jpg" class="perfil"></a>
+
+<input type="text" id="buscar" placeholder="Buscar producto...">
+
+</header>
+
+<div class="banner">
+
+<h1>Moda Femenina</h1>
+
+<p>Descubre las últimas tendencias.</p>
+
+</div>
+
+<div class="prod" id="productos">
+
+<div class="card">
+
+<img src="fotod de productos/producto0.0.jpeg">
+
+<h2>VESTIDO TIGRE</h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos.html"
+target="_blank">
+ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto1.0.jpeg">
+
+<h2>Vestido  Rojo</h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos1.html"
+target="_blank">
+ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto2.0.jpeg">
+
+<h2>vestido largo celeste</h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos2.html"
+target="_blank">
+ver 
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto4.0.jpeg">
+
+<h2>Vestido  naranjado</h2>
+
+<p class="precio">Bs. 65</p>
+
+<a class="btn"
+href="producto/productos3.html"
+target="_blank">
+ver 
+</a>
+
+</div>
+
+</div>
+
+<div class="prod" id="productos">
+
+<div class="card">
+
+<img src="fotod de productos/producto5.0.jpeg">
+
+<h2>Vestido largo de hojas </h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos4.html"
+target="_blank">
+ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto6.0.jpeg">
+
+<h2>Vestido  rojo de hojas </h2>
+
+<p class="precio">Bs.95</p>
+
+<a class="btn"
+href="producto/productos5.html"
+target="_blank">
+ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto7.0.jpeg">
+
+<h2>Vestido  verde de hojas</h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos6.html"
+target="_blank">
+ver 
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto8.0.jpeg">
+
+<h2>Vestido  Celeste</h2>
+
+<p class="precio">Bs.85</p>
+
+<a class="btn"
+href="producto/productos7.html"
+target="_blank">
+ver 
+</a>
+
+</div>
+<div class="card">
+
+<img src="fotod de productos/producto9.0.jpeg">
+
+<h2>vestido largo amarillo de hojas</h2>
+
+<p class="precio">Bs. 50</p>
+
+<a class="btn"
+href="producto/productos8.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto10.0.jpeg">
+
+<h2>VESTIDO  NEGRO</h2>
+ <BR>
+     
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos9.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto11.0.jpeg">
+
+<h2>VESTIDO  CAIN FLOREADO </h2>
+
+<p class="precio">Bs.95</p>
+
+<a class="btn"
+href="producto/productos10.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto12.0.jpeg">
+
+<h2>VESTIDO  MORADO FLOREADO</h2>
+
+<p class="precio">Bs. 95</p>
+
+<a class="btn"
+href="producto/productos11.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto13.0.jpeg">
+
+<h2>VESTIDO  BLANCO FLOREADO</h2>
+
+<p class="precio">Bs.95</p>
+
+<a class="btn"
+href="producto/productos12.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto14.0.jpeg">
+
+<h2>VESTIDO ROSA FLOREADO</h2>
+
+<p class="precio">Bs. 95</p>
+
+<a class="btn"
+href="producto/productos13.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto15.0.jpeg">
+
+<h2>VESTIDO ROSA  
+    <BR>
+        <BR>
+</h2>
+
+<p class="precio">Bs. 85</p>
+
+<a class="btn"
+href="producto/productos14.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="fotod de productos/producto16.0.jpeg">
+
+<h2>VESTIDO  VERDE DE HOJAS</h2>
+
+<p class="precio">Bs.85</p>
+
+<a class="btn"
+href="producto/productos16.html"
+target="_blank">
+Ver
+</a>
+
+</div>
+<div class="card">
+
+    <img src="fotod de productos/producto17.0.jpeg">
+
+    <h2>VESTIDO  PLOMO FLOREADO</h2>
+
+    <p class="precio">Bs. 85</p>
+
+    <a class="btn" href="producto/productos17.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+
+<div class="card">
+
+    <img src="fotod de productos/producto18.0.jpeg">
+
+    <h2>VESTIDO AZUL ACERO</h2>
+ <BR>
+        
+    <p class="precio">Bs. 85</p>
+
+    <a class="btn" href="producto/productos18.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+
+<div class="card">
+
+    <img src="fotod de productos/producto19.0.jpeg">
+
+    <h2>VESTIDO NEGRO FLOREADO</h2>
+
+    <p class="precio">Bs. 85</p>
+
+    <a class="btn" href="producto/productos19.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+
+<div class="card">
+
+    <img src="fotod de productos/producto20.0.jpeg">
+
+    <h2>VESTIDO CAFÈ FLOREADO</h2>
+
+    <p class="precio">Bs. 85</p>
+
+    <a class="btn" href="producto/productos20.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+
+<div class="card">
+
+    <img src="fotod de productos/producto21.0.jpeg">
+
+    <h2>VESTIDO CAFÈ </h2>
+
+    <p class="precio">Bs.85</p>
+
+    <a class="btn" href="producto/productos21.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+
+<div class="card">
+
+    <img src="fotod de productos/producto22.0.jpeg">
+
+    <h2>VESTIDO CELESTE FLOREADO</h2>
+
+    <p class="precio">Bs. 85</p>
+
+    <a class="btn" href="producto/productos22.html" target="_blank">
+        Ver
+    </a>
+
+</div>
+<div class="card">
+    <img src="fotod de productos/producto23.0.jpeg">
+    <h2>VESTIDO CELESTE CORTO</h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos23.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto24.0.jpeg">
+    <h2>BLUSA CAFÈ CORTO</h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos24.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto25.0.jpeg">
+    <h2>VESTIDO CORTO AMARILLO </h2>
+    <p class="precio">Bs. 40</p>
+    <a class="btn" href="producto/productos25.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto26.0.jpeg">
+    <h2>VESTIDO CORTO ROSA DE CIRCULOS</h2>
+    <p class="precio">Bs. 50</p>
+    <a class="btn" href="producto/productos26.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto27.0.jpeg">
+    <h2>BLUSA BLANCA FLOREADO</h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos27.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto28.0.jpeg">
+    <h2>BLUSA NARANJADA 🍁🍂 </h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos28.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto29.jpeg">
+    <h2>BLUSA VERDE FLOREADO</h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos29.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto30.0.jpeg">
+    <h2>BLUSA COLOR LECHUGA </h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos30.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto31.0.jpeg">
+    <h2>BLUSA NEGRA FLOREADA</h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos31.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto32.0.jpeg">
+    <h2>BLUSA BLANCO </h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos32.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto33.0.jpeg">
+    <h2>VESTIDO CORTO MORADO</h2>
+    <p class="precio">Bs. 300</p>
+    <a class="btn" href="producto/productos33.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto34.0.jpeg">
+    <h2>BLUSA CELESTE
+        <BR>
+            <BR>
+    </h2>
+    <p class="precio">Bs. 35</p>
+    <a class="btn" href="producto/productos34.html" target="_blank">Ver</a>
+</div>
+
+<div class="card">
+    <img src="fotod de productos/producto35.0.jpeg">
+    <h2>VESTIDO CORTO BLANCO</h2>
+    <p class="precio">Bs.35</p>
+    <a class="btn" href="producto/productos35.html" target="_blank">Ver</a>
+</div>
+</div>
+
+<footer>
+
+© 2026 VEYRUN - Moda Femenina
+              JR
+
+</footer>
+
+<script>
+
+const buscar=document.getElementById("buscar");
+
+buscar.addEventListener("keyup",()=>{
+
+let texto=buscar.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+let nombre=card.querySelector("h2").textContent.toLowerCase();
+
+card.style.display=nombre.includes(texto)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

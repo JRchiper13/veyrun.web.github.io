@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veyrun Fashion</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(0, 0, 0) , rgb(86, 86, 212));
+}
+
+/* Menú */
+header{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ffcc00;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffcc00;
+}
+
+/* Banner */
+
+.banner{
+    height:500px;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(54, 56, 78, 0.5)),
+    url("Logos.html/logo.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+}
+
+.banner h1{
+    font-size:60px;
+}
+
+.banner p{
+    margin-top:15px;
+    font-size:22px;
+}
+
+.banner button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    background:#ffcc00;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+.banner button:hover{
+    background:white;
+}
+
+/* Productos */
+
+section{
+    padding:60px;
+}
+
+.titulo{
+    color: bisque;
+    text-align:center;
+    font-size:35px;
+    margin-bottom:40px;
+}
+
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.precio{
+    color:rgb(217, 66, 236);
+    font-size:22px;
+    padding:0 15px;
+}
+
+.card button{
+    margin:15px;
+    width:calc(100% - 30px);
+    padding:12px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#ffcc00;
+    color:black;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+.vid{
+    color: #111;
+    background: linear-gradient(to right, rgb(0, 0, 0) , rgb(86, 86, 212));
+}
+.mik {
+          height:19px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+    }
+    .mik button{
+            margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    background:#ffcc00;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:8px;
+    }
+    .imagen-redonda{
+
+    width:60px;
+    height: 60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+/* Animación de entrada de productos */
+.card{
+    opacity:0;
+    transform:translateY(40px);
+    animation: aparecer .8s ease forwards;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* efecto escalonado */
+.card:nth-child(1){animation-delay:.1s;}
+.card:nth-child(2){animation-delay:.2s;}
+.card:nth-child(3){animation-delay:.3s;}
+.card:nth-child(4){animation-delay:.4s;}
+.card:nth-child(5){animation-delay:.5s;}
+.card:nth-child(6){animation-delay:.6s;}
+.card:nth-child(7){animation-delay:.7s;}
+.card:nth-child(8){animation-delay:.8s;}
+</style>
+</head>
+<body>
+    
+<header>
+    <img src="Logos.html/logo.png" width="100xp" class="imagen-redonda">
+<div class="logo">VEYRUN</div>
+
+<nav>
+
+<a href="ventas.html">👗 Mujeres</a>
+<a href="contactos.html">👤Contacto</a>
+</nav>
+
+</header>
+
+<div class="banner">
+<h1>Nueva Colección 2026</h1>
+<p>Moda elegante para todos los estilos.</p>
+<a href="ventas.html"><button> Comprar Ahora</button></a>
+</div>
+
+<section>
+
+<h2 class="titulo">Productos Destacados</h2>
+
+<div class="productos">
+
+<div class="card">
+<img src="fotod de productos/producto20.0.jpeg">
+<h3>Vestido maron</h3>
+<p class="precio">$45</p>
+<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20maron" target="_blank">
+    <button>Comprar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="fotod de productos/producto27.0.jpeg">
+<h3>Vestido corto lila</h3>
+<p class="precio">$20</p>
+<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20corto%20lila" target="_blank">
+    <button>Comprar</button>
+</a>
+</div>
+<div class="card">
+<img src="fotod de productos/producto22.0.jpeg">
+<h3>Vestido celeste largo</h3>
+<p class="precio">$35</p>
+<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20celeste%20largo" target="_blank">
+    <button>Comprar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="fotod de productos/producto23.0.jpeg">
+<h3>Vestido celeste corto</h3>
+<p class="precio">$55</p>
+<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20celeste%20corto" target="_blank">
+    <button>Comprar</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer class="vid">
+© 2026 VEYRUN Fashion | JR :BURGOS.
+</footer>
+
+</body>
+</html>

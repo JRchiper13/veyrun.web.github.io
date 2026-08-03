@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | VEYRUN</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#723737,#e43131);
+}
+
+header{
+    background:linear-gradient(135deg,#723737,#e43131);
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.contenedor{
+    max-width:1000px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.contactos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.tarjeta{
+    background:#fafafa;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.icono{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.tarjeta h3{
+    margin-bottom:10px;
+}
+
+.tarjeta p{
+    color:#555;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    background:#000;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e91e63;
+}
+.foto{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+VEYRUN
+</header>
+<a href="index.html"><img src="flecha.jpg" class="foto"></a>
+<div class="contenedor">
+
+<h2>Contáctanos</h2>
+
+<div class="contactos">
+
+<div class="tarjeta">
+<a href="https://www.tiktok.com/@veyrun_moda?_r=1&_t=ZS-98Trz89M8cJ">
+    <div class="icono"><img src="contactos/tiktok-LOGO.jpg" height="70"></div>
+    </a>
+<h3>Tiktok</h3>
+<p>contacto@veyrun.com</p>
+</div>
+
+<div class="tarjeta">
+<a href="https://wa.me/76608557" target="_blank">
+<div class="icono"><img src="contactos/whass.jpg" height="70"></div></a>
+<h3>WhatsApp</h3>
+<p>+591 76608557</p>
+</div>
+
+<div class="tarjeta">
+<a href="https://www.facebook.com/share/1CkMQQsurC/">
+    <div class="icono"><img src="contactos/face.jpg" height="70"></div>
+</a>
+<h3>Facebook</h3>
+<p>Veyrun Oficial</p>
+</div>
+
+<div class="tarjeta">
+<a href="https://www.instagram.com/veyru_n?igsh=dDg0Z2xsMmlpOGcz">
+    <div class="icono"><img src="contactos/ig.jpg" height="70"></div></a>
+<h3>Instagram</h3>
+<p>@veyrun.store</p>
+
+</div>
+
+
+</body>
+</html>
