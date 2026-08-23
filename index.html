@@ -1,291 +1,1215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veyrun Fashion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veyrun - Moda y confección en Santa Cruz, Bolivia">
+    <title>Veyrun | Moda & Confección</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background: linear-gradient(to right, rgb(0, 0, 0) , rgb(86, 86, 212));
-}
-
-/* Menú */
-header{
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-}
-
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#ffcc00;
-}
-
-nav a{
-    color:white;
+/* ===== Enlace para abrir la ficha completa del producto ===== */
+.product-link{
+    display:block;
+    margin-top:10px;
+    text-align:center;
     text-decoration:none;
-    margin-left:25px;
-    transition:.3s;
+    font-weight:600;
 }
-
-nav a:hover{
-    color:#ffcc00;
-}
-
-/* Banner */
-
-.banner{
-    height:500px;
-    background:linear-gradient(rgba(0,0,0,.5),rgba(54, 56, 78, 0.5)),
-    url("Logos.html/logo.png");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    color:white;
-    text-align:center;
-}
-
-.banner h1{
-    font-size:60px;
-}
-
-.banner p{
-    margin-top:15px;
-    font-size:22px;
-}
-
-.banner button{
-    margin-top:25px;
-    padding:15px 35px;
-    border:none;
-    background:#ffcc00;
-    font-size:18px;
-    cursor:pointer;
-    border-radius:8px;
-}
-
-.banner button:hover{
-    background:white;
-}
-
-/* Productos */
-
-section{
-    padding:60px;
-}
-
-.titulo{
-    color: bisque;
-    text-align:center;
-    font-size:35px;
-    margin-bottom:40px;
-}
-
-.productos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
+.product-image img{
     width:100%;
-    height:300px;
+    height:100%;
     object-fit:cover;
+    display:block;
 }
-
-.card h3{
-    padding:15px;
-}
-
-.precio{
-    color:rgb(217, 66, 236);
-    font-size:22px;
-    padding:0 15px;
-}
-
-.card button{
-    margin:15px;
-    width:calc(100% - 30px);
-    padding:12px;
-    border:none;
-    background:#111;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.card button:hover{
-    background:#ffcc00;
-    color:black;
-}
-
-/* Footer */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:50px;
-}
-.vid{
-    color: #111;
-    background: linear-gradient(to right, rgb(0, 0, 0) , rgb(86, 86, 212));
-}
-.mik {
-          height:19px;
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    color:white;
-    text-align:center;
-    }
-    .mik button{
-            margin-top:25px;
-    padding:15px 35px;
-    border:none;
-    background:#ffcc00;
-    font-size:18px;
-    cursor:pointer;
-    border-radius:8px;
-    }
-    .imagen-redonda{
-
-    width:60px;
-    height: 60px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-}
-/* Animación de entrada de productos */
-.card{
-    opacity:0;
-    transform:translateY(40px);
-    animation: aparecer .8s ease forwards;
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(40px) scale(.9);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-/* efecto escalonado */
-.card:nth-child(1){animation-delay:.1s;}
-.card:nth-child(2){animation-delay:.2s;}
-.card:nth-child(3){animation-delay:.3s;}
-.card:nth-child(4){animation-delay:.4s;}
-.card:nth-child(5){animation-delay:.5s;}
-.card:nth-child(6){animation-delay:.6s;}
-.card:nth-child(7){animation-delay:.7s;}
-.card:nth-child(8){animation-delay:.8s;}
 </style>
 </head>
+
 <body>
-    
-<header>
-    <img src="Logos.html/logo.png" width="100xp" class="imagen-redonda">
-<div class="logo">VEYRUN</div>
 
-<nav>
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
 
-<a href="ventas.html">👗 Mujeres</a>
-<a href="contactos.html">👤Contacto</a>
-</nav>
+    <a href="#" class="logo">
+        <span>VE</span>YRUN
+    </a>
+
+    <nav class="navbar" id="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="icon-btn" id="searchBtn">
+            🔍
+        </button>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </div>
 
 </header>
 
-<div class="banner">
-<h1>Nueva Colección 2026</h1>
-<p>Moda elegante para todos los estilos.</p>
-<a href="ventas.html"><button> Comprar Ahora</button></a>
-</div>
 
-<section>
+<!-- ================= BUSCADOR ================= -->
+<div class="search-box" id="searchBox">
 
-<h2 class="titulo">Productos Destacados</h2>
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar productos..."
+    >
 
-<div class="productos">
-
-<div class="card">
-<img src="fotod de productos/producto20.0.jpeg">
-<h3>Vestido mostaza</h3>
-<p class="precio">bs. 85</p>
-<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20mostaza" target="_blank">
-    <button>Comprar</button>
-</a>
-</div>
-
-<div class="card">
-<img src="fotod de productos/producto27.0.jpeg">
-<h3>Vestido corto lila</h3>
-<p class="precio">bs. 35</p>
-<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20corto%20lila" target="_blank">
-    <button>Comprar</button>
-</a>
-</div>
-<div class="card">
-<img src="fotod de productos/producto22.0.jpeg">
-<h3>Vestido celeste largo</h3>
-<p class="precio">bs. 85</p>
-<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20celeste%20largo" target="_blank">
-    <button>Comprar</button>
-</a>
-</div>
-
-<div class="card">
-<img src="fotod de productos/producto23.0.jpeg">
-<h3>Vestido celeste corto</h3>
-<p class="precio">bs .35</p>
-<a href="https://wa.me/76608557?text=Hola,%20quiero%20comprar%20el%20Vestido%20celeste%20corto" target="_blank">
-    <button>Comprar</button>
-</a>
-</div>
+    <button id="closeSearch">✕</button>
 
 </div>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="small-title">
+            MODA • ESTILO • CALIDAD
+        </span>
+
+        <h1>
+            Tu estilo,
+            <span>tu esencia.</span>
+        </h1>
+
+        <p>
+            Descubre nuestra colección de prendas diseñadas
+            para destacar tu personalidad.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#productos" class="btn primary">
+                Ver colección
+            </a>
+
+            <a href="#nosotros" class="btn secondary">
+                Conócenos
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="image-card">
+
+            <img
+                src="Logos.html/logo.png"
+                alt="Logo Veyrun"
+                class="hero-logo"
+            >
+
+        </div>
+
+    </div>
 
 </section>
 
-<footer class="vid">
-© 2026 VEYRUN Fashion | JR :BURGOS.
-</footer>
+<!-- ================= SERVICIOS ================= -->
+<section class="services" id="servicios">
+
+    <div class="section-title">
+
+        <span>NUESTROS SERVICIOS</span>
+
+        <h2>Más que una tienda</h2>
+
+    </div>
+
+    <div class="services-grid">
+
+        <!-- CONFECCIÓN -->
+        <div class="service-card">
+
+            <div>✂️</div>
+
+            <h3>Confección</h3>
+
+            <p>
+                Trae tu modelo y nosotros podemos confeccionarlo.
+            </p>
+
+            <a
+                class="service-button"
+                href="https://wa.me/59176608557?text=Hola%20Veyrun%2C%20quisiera%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20confecci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar por WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- REPARACIÓN -->
+        <div class="service-card">
+
+            <div>🧵</div>
+
+            <h3>Reparación</h3>
+
+            <p>
+                Reparamos y ajustamos tus prendas.
+            </p>
+
+            <a
+                class="service-button"
+                href="https://wa.me/59176608557?text=Hola%20Veyrun%2C%20quisiera%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20reparaci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar por WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- PERSONALIZACIÓN -->
+        <div class="service-card">
+
+            <div>🎨</div>
+
+            <h3>Personalización</h3>
+
+            <p>
+                Creamos diseños adaptados a tus gustos.
+            </p>
+
+            <a
+                class="service-button"
+                href="https://wa.me/59176608557?text=Hola%20Veyrun%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20personalizaci%C3%B3n%20de%20prendas."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar por WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- PEDIDOS -->
+        <div class="service-card">
+
+            <div>📦</div>
+
+            <h3>Pedidos</h3>
+
+            <p>
+                Realiza tus pedidos de forma rápida y sencilla.
+            </p>
+
+            <a
+                class="service-button"
+                href="https://wa.me/59176608557?text=Hola%20Veyrun%2C%20quisiera%20realizar%20un%20pedido."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Hacer pedido
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PRODUCTOS ================= -->
+<section class="products-section" id="productos">
+
+    <div class="section-title">
+
+        <span>COLECCIÓN</span>
+
+        <h2>Productos destacados</h2>
+
+        <p>
+            Conoce algunos de nuestros productos favoritos.
+        </p>
+
+    </div>
+
+    <div class="filter-buttons">
+
+        <button class="filter active" data-filter="all">
+            Todos
+        </button>
+
+        <button class="filter" data-filter="vestidos">
+            Vestidos
+        </button>
+
+        <button class="filter" data-filter="blusas">
+            Blusas
+        </button>
+
+        <button class="filter" data-filter="conjuntos">
+            Conjuntos
+        </button>
+
+    </div>
+
+
+    <div class="products-grid" id="productsGrid">
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                <span class="badge">NUEVO</span>
+                <img src="fotod de productos/producto0.0.jpeg" alt="VESTIDO TIGRE" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO TIGRE</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto1.0.jpeg" alt="VESTIDO ROJO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO ROJO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos1.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto2.0.jpeg" alt="VESTIDO LARGO CELESTE" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO LARGO CELESTE</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos2.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto4.0.jpeg" alt="VESTIDO NARANJADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO NARANJADO</h3>
+                <p class="price">Bs 65</p>
+                <a class="product-link" href="producto/productos3.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto5.0.jpeg" alt="VESTIDO LARGO DE HOJAS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO LARGO DE HOJAS</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos4.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto6.0.jpeg" alt="VESTIDO ROJO DE HOJAS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO ROJO DE HOJAS</h3>
+                <p class="price">Bs 95</p>
+                <a class="product-link" href="producto/productos5.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto7.0.jpeg" alt="VESTIDO VERDE DE HOJAS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO VERDE DE HOJAS</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos6.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto8.0.jpeg" alt="VESTIDO CELESTE" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CELESTE</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos7.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto9.0.jpeg" alt="VESTIDO LARGO AMARILLO DE HOJAS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO LARGO AMARILLO DE HOJAS</h3>
+                <p class="price">Bs 50</p>
+                <a class="product-link" href="producto/productos8.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto10.0.jpeg" alt="VESTIDO NEGRO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO NEGRO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos9.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto11.0.jpeg" alt="VESTIDO CAIN FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CAIN FLOREADO</h3>
+                <p class="price">Bs 95</p>
+                <a class="product-link" href="producto/productos10.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto12.0.jpeg" alt="VESTIDO MORADO FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO MORADO FLOREADO</h3>
+                <p class="price">Bs 95</p>
+                <a class="product-link" href="producto/productos11.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto13.0.jpeg" alt="VESTIDO BLANCO FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO BLANCO FLOREADO</h3>
+                <p class="price">Bs 95</p>
+                <a class="product-link" href="producto/productos12.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto14.0.jpeg" alt="VESTIDO ROSA FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO ROSA FLOREADO</h3>
+                <p class="price">Bs 95</p>
+                <a class="product-link" href="producto/productos13.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto15.0.jpeg" alt="VESTIDO ROSA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO ROSA</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos14.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto16.0.jpeg" alt="VESTIDO VERDE DE HOJAS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO VERDE DE HOJAS</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos16.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto17.0.jpeg" alt="VESTIDO PLOMO FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO PLOMO FLOREADO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos17.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto18.0.jpeg" alt="VESTIDO AZUL ACERO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO AZUL ACERO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos18.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto19.0.jpeg" alt="VESTIDO NEGRO FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO NEGRO FLOREADO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos19.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto20.0.jpeg" alt="VESTIDO CAFÉ FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CAFÉ FLOREADO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos20.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto21.0.jpeg" alt="VESTIDO CAFÉ" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CAFÉ</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos21.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto22.0.jpeg" alt="VESTIDO CELESTE FLOREADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CELESTE FLOREADO</h3>
+                <p class="price">Bs 85</p>
+                <a class="product-link" href="producto/productos22.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto23.0.jpeg" alt="VESTIDO CELESTE CORTO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CELESTE CORTO</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos23.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto24.0.jpeg" alt="BLUSA CAFÉ CORTA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA CAFÉ CORTA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos24.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto25.0.jpeg" alt="VESTIDO CORTO AMARILLO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CORTO AMARILLO</h3>
+                <p class="price">Bs 40</p>
+                <a class="product-link" href="producto/productos25.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto26.0.jpeg" alt="VESTIDO CORTO ROSA DE CÍRCULOS" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CORTO ROSA DE CÍRCULOS</h3>
+                <p class="price">Bs 50</p>
+                <a class="product-link" href="producto/productos26.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto27.0.jpeg" alt="BLUSA BLANCA FLOREADA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA BLANCA FLOREADA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos27.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto28.0.jpeg" alt="BLUSA NARANJADA 🍁🍂" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA NARANJADA 🍁🍂</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos28.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto29.jpeg" alt="BLUSA VERDE FLOREADA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA VERDE FLOREADA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos29.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto30.0.jpeg" alt="BLUSA COLOR LECHUGA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA COLOR LECHUGA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos30.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto31.0.jpeg" alt="BLUSA NEGRA FLOREADA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA NEGRA FLOREADA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos31.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto32.0.jpeg" alt="BLUSA BLANCA" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA BLANCA</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos32.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto33.0.jpeg" alt="VESTIDO CORTO MORADO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CORTO MORADO</h3>
+                <p class="price">Bs 300</p>
+                <a class="product-link" href="producto/productos33.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="blusas">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto34.0.jpeg" alt="BLUSA CELESTE" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Blusas</span>
+                <h3>BLUSA CELESTE</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos34.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="vestidos">
+            <div class="product-image">
+                
+                <img src="fotod de productos/producto35.0.jpeg" alt="VESTIDO CORTO BLANCO" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span>Vestidos</span>
+                <h3>VESTIDO CORTO BLANCO</h3>
+                <p class="price">Bs 35</p>
+                <a class="product-link" href="producto/productos35.html" target="_blank">
+                    Ver producto
+                </a>
+            </div>
+        </article>
+    </div>
+
+</section>
+
+
+<!-- ================= OFERTA ================= -->
+<section class="offer">
+
+    <div>
+
+        <span>OFERTA ESPECIAL</span>
+
+        <h2>
+            Hasta 20% de descuento
+        </h2>
+
+        <p>
+            Aprovecha nuestras promociones por tiempo limitado.
+        </p>
+
+        <a href="#productos" class="btn primary">
+            Comprar ahora
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NOSOTROS ================= -->
+<section class="about" id="nosotros">
+
+    <div class="about-image">
+   <img src="Logos.html/logo.png" width="470" alt="Logo Veyrun">
+    </div>
+
+    <div class="about-content">
+
+        <span>QUIÉNES SOMOS</span>
+
+        <h2>
+            Moda hecha en Santa Cruz
+        </h2>
+
+        <p>
+            Somos un emprendimiento dedicado a la moda,
+            confección y personalización de prendas.
+        </p>
+
+        <p>
+            Trabajamos para ofrecer diseños modernos,
+            cómodos y adaptados a cada cliente.
+        </p>
+
+        <div class="stats">
+
+            <div>
+                <strong>100%</strong>
+                <span>Boliviano</span>
+            </div>
+
+            <div>
+                <strong>+100</strong>
+                <span>Clientes</span>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <span>Pedidos</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonials">
+
+    <div class="section-title">
+
+        <span>CLIENTES</span>
+
+        <h2>Lo que dicen de nosotros</h2>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Me encantó el vestido y la atención."
+            </p>
+
+            <strong>
+                Cliente Veyrun
+            </strong>
+
+        </div>
+
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "El diseño quedó exactamente como quería."
+            </p>
+
+            <strong>
+                Cliente Veyrun
+            </strong>
+
+        </div>
+
+
+        <div class="testimonial">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Muy buena calidad y excelente servicio."
+            </p>
+
+            <strong>
+                Cliente Veyrun
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+<section class="faq">
+
+    <div class="section-title">
+
+        <span>AYUDA</span>
+
+        <h2>Preguntas frecuentes</h2>
+
+    </div>
+
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Hacen pedidos personalizados?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Sí. Puedes mostrarnos un modelo y podemos
+                    trabajar en una prenda personalizada.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Hacen envíos?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Consulta la disponibilidad de envío según tu zona.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Cómo puedo realizar un pedido?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Puedes contactarnos por WhatsApp y enviarnos
+                    los detalles de tu pedido.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+<section class="contact-page" id="contacto">
+
+    <div class="contact-header">
+        <span>VEYRUN</span>
+        <h2>Contáctanos</h2>
+        <p>
+            Encuéntranos en nuestras redes sociales y realiza tus pedidos.
+        </p>
+    </div>
+
+    <a href="#inicio" class="back-button">
+        ← Volver al inicio
+    </a>
+
+    <div class="contact-cards">
+
+        <!-- TIKTOK -->
+        <div class="contact-card">
+
+            <a href="https://www.tiktok.com/@veyrun_moda?_r=1&_t=ZS-98Trz89M8cJ"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <img src="contactos/tiktok-LOGO.jpg" alt="TikTok Veyrun">
+                </div>
+
+            </a>
+
+            <h3>TikTok</h3>
+            <p>@veyrun_moda</p>
+
+            <a class="contact-button"
+               href="https://www.tiktok.com/@veyrun_moda?_r=1&_t=ZS-98Trz89M8cJ"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visitar TikTok
+            </a>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <div class="contact-card">
+
+            <a href="https://wa.me/59176608557"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <img src="contactos/whass.jpg" alt="WhatsApp Veyrun">
+                </div>
+
+            </a>
+
+            <h3>WhatsApp</h3>
+            <p>+591 76608557</p>
+
+            <a class="contact-button"
+               href="https://wa.me/59176608557"
+               target="_blank"
+               rel="noopener noreferrer">
+                Escribir por WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- FACEBOOK -->
+        <div class="contact-card">
+
+            <a href="https://www.facebook.com/share/1CkMQQsurC/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <img src="contactos/face.jpg" alt="Facebook Veyrun">
+                </div>
+
+            </a>
+
+            <h3>Facebook</h3>
+            <p>Veyrun Oficial</p>
+
+            <a class="contact-button"
+               href="https://www.facebook.com/share/1CkMQQsurC/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visitar Facebook
+            </a>
+
+        </div>
+
+
+        <!-- INSTAGRAM -->
+        <div class="contact-card">
+
+            <a href="https://www.instagram.com/veyru_n?igsh=dDg0Z2xsMmlpOGcz"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="contact-icon">
+                    <img src="contactos/ig.jpg" alt="Instagram Veyrun">
+                </div>
+
+            </a>
+
+            <h3>Instagram</h3>
+            <p>@veyru_n</p>
+
+            <a class="contact-button"
+               href="https://www.instagram.com/veyru_n?igsh=dDg0Z2xsMmlpOGcz"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visitar Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <a href="#" class="logo">
+                <span>VE</span>YRUN
+            </a>
+
+            <p>
+                Moda y confección hecha en Bolivia.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Enlaces</h3>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Redes sociales</h3>
+
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">WhatsApp</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Información</h3>
+
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Preguntas frecuentes</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Veyrun. JR BR.
+
+    </div>
+
+
+
+
+</div>
+
+
+<!-- ================= WHATSAPP ================= -->
+<a
+    class="whatsapp"
+    href="https://wa.me/67611526"
+    target="_blank"
+>
+    💬
+</a>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
